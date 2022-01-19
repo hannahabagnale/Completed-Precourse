@@ -1,13 +1,13 @@
 //In these first 6 questions, replace `null` with the answer.
 
 //Create a string variable. It can contain anything
-const newString = null ;
+const newString = 4;
 
 //Create a number variable. It an be any number
-const newNum = null ;
+const newNum = 5;
 
 //Create a boolean variable.
-const newBool = null ;
+const newBool = true;
 
 //Solve the following math problem.
 const newSubtract = 10 - 5 === 5;
