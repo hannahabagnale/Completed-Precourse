@@ -12,8 +12,8 @@
 */
 
 // code here
-  const createdBy = document.querySelector('createdBy');
-  createdBy.innerHTML = createdBy.innerHTML + 'Hannah Vernice Celestial';
+const span = document.querySelector('#createdBy');
+span.innerHTML  = span.innerHTML + " " + 'Hannah Vernice Celestial';
 
 /*
   STEP 2: Create a class called 'ToDo'.  The constructor should have one string parameter called description, the description of the toDo.
@@ -21,9 +21,9 @@
           'complete' which should be set to false. Hint: use the 'this' keyword in the constructor function.
 */
 
-function ToDo (description) {
+function ToDo() {
   // code 
-  this.description = description;
+  this.description = "Create ToDo";
   this.complete = false;
 }
 
@@ -34,8 +34,10 @@ function ToDo (description) {
 */
 
 // code here
-ToDo.prototype.completeToDo = function (){
-  this.complete = true;
+ToDo.prototype.completeToDo = function () {
+  if (this.complete == false) {
+    this.complete = true;
+  }
 }
 
 /*
@@ -54,7 +56,7 @@ ToDo.prototype.completeToDo = function (){
             8.) return toDoShell
 */
 
-function buildToDo(toDo, index) {
+function buildToDo(todo, index) {
   // code here
   console.log(todo);
   const toDoShell = document.createElement('div');
@@ -87,7 +89,7 @@ function buildToDo(toDo, index) {
 
 function buildToDos(toDos) {
   // code here
-  return toDos.map(buildToDo);
+  return toDos.map((toDo, i) => buildToDo(toDo, i))
 }
 
 /*
@@ -104,12 +106,10 @@ function buildToDos(toDos) {
 
 function displayToDos() {
   // code here
-  let toDoContainer = document.querySelector('#toDoContainer');
-  toDoContainer.innerHTML = '';
-  let itemsArray = buildToDos(toDoItems);
-  for (let item = 0; item < itemsArray.length; item++) {
-    toDoContainer.appendChild(itemsArray[item]);
-  }
+  let toDoContainer = document.getElementById('toDoContainer');
+    toDoContainer.innerHTML = '';
+    let _Arr = buildToDos(toDoItems);
+    _Arr.forEach(item => toDoContainer.appendChild(item));
 }
 
 /*
@@ -126,11 +126,11 @@ function displayToDos() {
 
 function addToDo() {
   // code here
-  let newToDo = doccument.querySelector('#toDoInput');
-  let nextToDo = new ToDo(newToDo.value);
-  toDoItems.push(nextToDo);
-  newToDo.value = '';
-  displayToDos();
+  let newObject = new ToDo();
+  newObject.constructor(document.querySelector('#toDoInput').value);
+  toDoItems.push(newObject);
+  document.querySelector('#toDoInput').value = '';
+  displayToDos()
 }
 
 /*
