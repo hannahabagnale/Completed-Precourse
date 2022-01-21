@@ -64,7 +64,7 @@ function areEqual(x, y) {
   // return true if x and y are the same
   // otherwise return false
   // code here
-  if (x = y) {
+  if (x === y) {
     return true;
   } else {
     return false;
@@ -76,7 +76,7 @@ function areSameLength(str1, str2) {
   // return true if the two strings have the same length
   // otherwise return false
   // code here
-  if (str1.length = str2.length) {
+  if (str1.length === str2.length) {
     return true;
   } else {
     return false;
@@ -116,7 +116,7 @@ function isEven(num) {
   // return true if num is even
   // otherwise return false
   // code here
-  if (num % 2 = 0) {
+  if (num % 2 === 0) {
     return true;
   } else {
     return false;
@@ -127,7 +127,7 @@ function isOdd(num) {
   // return true if num is odd
   // otherwise return false
   // code here
-  if (num % 2 != 0) {
+  if (num % 2 !== 0) {
     return true;
   } else {
     return false;
