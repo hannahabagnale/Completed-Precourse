@@ -1,7 +1,5 @@
 // Do not change any of the function names
 
-const { greaterThanFifty } = require("../../L4/Homework/homework");
-
 //Example 1:
 function getBiggest(x, y) {
   // x and y are integers.  Return the larger integer
@@ -19,24 +17,21 @@ function greeting(language) {
   // language: 'Mandarin' -> 'Ni Hao!'
   // language: 'Spanish' -> 'Hola!'
   // if language is undefined return 'Hello!'
-  if (language = German) {
-    return greeting = 'Guten Tag!';
-  }
-  if (language = Mandarin) {
-    return greeting = 'Ni Hao!';
-  }
-  if (language = Spanish) {
-    return greeting = 'Hola!';
-  }
-  if (language = undefined) {
-    return greeting = 'Hello!';
+  if (language === 'German') {
+    return 'Guten Tag!';
+  } else if (language === 'Mandarin') {
+    return 'Ni Hao!';
+  } else if (language === 'Spanish') {
+    return 'Hola!';
+  } else {
+    return 'Hello!';
   }
 }
 
 function isTenOrFive(num) {
   // return true if num is 10 or 5
   // otherwise return false
-  if (num = 5 || 10) {
+  if (num === 5 || num === 10) {
     return greeting = true;
   } else {
     return greeting = false;
@@ -60,11 +55,10 @@ function isInteger(num) {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  if math.floor(num) > num {
+  if (Math.floor(num) < num) {
     return false;
   } else
     return true;
-  }
 }
 
 function fizzBuzz(num) {
@@ -72,15 +66,15 @@ function fizzBuzz(num) {
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
   // otherwise return num
-  if (num % 3 === 0) { 
+  if ((num % 3 === 0) && (num % 5 === 0)) {
+    return 'fizzbuzz';
+  } else if (num % 3 === 0) { 
     return 'fizz';
   } else if (num % 5 === 0) {
     return 'buzz';
-  } else if (num % 3 === 0 && num % 5 === 0) {
-    return 'fizzbuzz';
   } else {
     return num;
-  }
+  };
 }
 
 function isPrime(num) {
@@ -89,9 +83,21 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  for let (i = 2; i < num; i++)
-    if (num % i === 0) return false;
-    return num !== 1 && num !== 0;
+  if( num == 0){
+    return false;
+  }
+  else if( num == 1){
+    return false;
+  }
+  else {
+      for ( let i = 2; i < num; i++){
+         if(num % i !== 0){
+            return true;
+      }
+      else {
+      return false;
+      }
+    }
   }
 }
 
