@@ -6,13 +6,10 @@ const { greaterThanFifty } = require("../../L4/Homework/homework");
 function getBiggest(x, y) {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
-  if (x > y) {
-    return getBiggest = x;
+  if (x >= y) {
+    return x;
   } else {
-    return getBiggest = y;
-  }
-  if (x = y) {
-    return getBiggest = x;
+    return y;
   }
 }
 
@@ -49,10 +46,10 @@ function isTenOrFive(num) {
 function isInRange(num) {
   // return true if num is less than 50 and greater than 20
   // otherwise return false
-  if (20 < num < 50) {
-    return isInRange = true;
+  if (num < 50 && num > 20) {
+    return true;
   } else {
-    return isInRange = false;
+    return false;
   }
 }
 
@@ -63,10 +60,10 @@ function isInteger(num) {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  if (num = Math.floor(num)) {
-    return isInteger = true;
-  } else {
-    return isInteger = false;
+  if math.floor(num) > num {
+    return false;
+  } else
+    return true;
   }
 }
 
@@ -75,17 +72,14 @@ function fizzBuzz(num) {
   // if num is divisible by 5 return 'buzz'
   // if num is divisible by 3 & 5 return 'fizzbuzz'
   // otherwise return num
-  if ((num % 3) = 0) {
-    return fizzBuzz = 'fizz';
-  }
-  if ((num % 5) = 0) {
-    return fizzBuzz = 'buzz';
-  }
-  if ((num % (3 || 5)) = 0) {
-    return fizzBuzz = 'fizzbuzz';
-  }
-  if (!((num % (3 || 5)) = 0)) {
-    return fizzBuzz = num;
+  if (num % 3 === 0) { 
+    return 'fizz';
+  } else if (num % 5 === 0) {
+    return 'buzz';
+  } else if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  } else {
+    return num;
   }
 }
 
@@ -95,11 +89,9 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  for (let num = 2; num > 1; num++) {
-    return isPrime = true;
-  }
-  for (let num = 0; num = 1; num++) {
-    return isPrime = false;
+  for let (i = 2; i < num; i++)
+    if (num % i === 0) return false;
+    return num !== 1 && num !== 0;
   }
 }
 

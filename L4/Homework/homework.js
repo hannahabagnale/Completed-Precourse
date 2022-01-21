@@ -1,10 +1,10 @@
 //In these first 6 questions, replace `null` with the answer.
 
 //Create a string variable. It can contain anything
-const newString = 4;
+const newString = 'David';
 
 //Create a number variable. It an be any number
-const newNum = 5;
+const newNum = 69;
 
 //Create a boolean variable.
 const newBool = true;
@@ -26,18 +26,12 @@ const newModulo = 21 % 5 === 1 ;
 //Do not change any of the function names.
 
 function returnString(str) {
-  const returnString = str;
-  return returnString;
+  return str;
   //return the string provided: str
 }
 
-returnString(str);
-console.log(returnString);
 
 function add(x, y) {
- 
-  
-  
   // x and y are numbers
   // add x and y together and return the value
   // code here
@@ -71,9 +65,9 @@ function areEqual(x, y) {
   // otherwise return false
   // code here
   if (x = y) {
-    return areEqual = true;
+    return true;
   } else {
-    return areEqual = false;
+    return false;
   }
   
 }
@@ -82,10 +76,10 @@ function areSameLength(str1, str2) {
   // return true if the two strings have the same length
   // otherwise return false
   // code here
-  if (str1 = str2) {
-    return areSameLength = true;
+  if (str1.length = str2.length) {
+    return true;
   } else {
-    return areSameLength = false;
+    return false;
   }
 }
 
@@ -94,10 +88,10 @@ function lessThanNinety(num) {
   // otherwise return false
   // code here
 if (num < 90) {
-  return lessThanNinety = true;
+  return true;
 } else {
-  return lessThanNinety = false;
-
+  return false;
+}
 }
 
 function greaterThanFifty(num) {
@@ -105,9 +99,9 @@ function greaterThanFifty(num) {
   // otherwise return false
   // code here
   if (num > 50) {
-    return greaterThanFifty = true;
+    return true;
   } else {
-    return greaterThanFifty = false;
+    return false;
   }
 }
 
@@ -123,9 +117,9 @@ function isEven(num) {
   // otherwise return false
   // code here
   if (num % 2 = 0) {
-    return isEven = true;
+    return true;
   } else {
-    return isEven = false;
+    return false;
   }
 }
 
@@ -134,9 +128,9 @@ function isOdd(num) {
   // otherwise return false
   // code here
   if (num % 2 != 0) {
-    return isOdd = true;
+    return true;
   } else {
-    
+    return false;
   }
 }
 
@@ -158,43 +152,36 @@ function cube(num) {
 function raiseToPower(num, exponent) {
   // raise num to whatever power is passed in as exponent
   // code here
-  raiseToPower = Math.pow(num, exponent);
-  console.log(raiseToPower);
+  const raiseToPower = Math.pow(num, exponent);
+  return raiseToPower;
 }
 
 function roundNumber(num) {
   // round num and return it
   // code here
-  roundNumber = Math.round(num);
-  console.log(roundNumber);
+  const roundNumber = Math.round(num);
+  return roundNumber;
 }
 
 function roundUp(num) {
   // round num up and return it
   // code here
-  roundUp = Math.ceil(num);
-  console.log(roundUp);
-
+  return Math.ceil(num);
 }
 
 function addExclamationPoint(str) {
   // add an exclamation point to the end of str and return the new string
   // 'hello world' -> 'hello world!'
   // code here
-  const str = !;
-  console.log('hello world'+ str);
-  return addExclamationPoint;
+  const addstr = str + '!';
+  return addstr;
 }
-
-addExclamationPoint(hello world)
 
 function combineNames(firstName, lastName) {
   // return firstName and lastName combined as one string and separated by a space.
   // 'Avion', 'School' -> 'Avion School'
   // code here
-  const firstName = Avion;
-  const lastName = School;
-  console.log(firstName + lastName);
+  const combineNames = firstName + ' ' + lastName;
   return combineNames;
 }
 
@@ -202,8 +189,7 @@ function getGreeting(name) {
   // Take the name string and concatenate other strings onto it so it takes the following form:
   // 'Sam' -> 'Hello Sam!'
   // code here
-  const name = Sam;
-  console.log('Hello ' + name+!);
+  const getGreeting = 'Hello' + ' ' + name + '!';
   return getGreeting;
 }
 
