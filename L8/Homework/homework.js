@@ -34,13 +34,9 @@ function addReverseString() {
   // name this method reverse
   // hint:
   // you will need to use 'this' inside of reverse
-  String.prototype.reverse = function() {  
-    let reverseString = '';
-    for (var i = this.length - 1; i >=0; i--)
-      reverseString += this[i]
-    }
-    return reverseString;
-}
+}String.prototype.reverse = function() {
+  return this.split('').reverse().join('');
+};
 
 // Do not modify code below this line.
 // --------------------------------
