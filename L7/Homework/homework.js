@@ -5,21 +5,21 @@ function makeCat(name, age) {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-  const newObj = {
-    name:'name';
-    age:'age';
-    meow: function() {
-      console.log(Meow!);
-    return makeCat;
+  var cat = {
+    name : name,
+    age : age,
+    meow : function(){
+      return 'Meow!';
     }
   }
+  return cat;
 }
 
 function addProperty(object, property) {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
-  object['z'] = null;
+  object[property] = null;
   return object;
 }
 
@@ -28,9 +28,6 @@ function invokeMethod(object, method) {
   // invoke this method
   // nothing needs to be returned
   object[method]();
-  object['x']();
-  }
-  invokeMethod("invokeobject","foo");
 }
 
 function multiplyMysteryNumberByFive(mysteryNumberObject) {
@@ -43,22 +40,18 @@ function multiplyMysteryNumberByFive(mysteryNumberObject) {
 function deleteProperty(object, property) {
   // remove the property from the object
   // return the object
-  const deleteProperty = {
-    removethisproperty: true,
-  };
-  delete deleteProperty.removethisproperty;
-  return deleteProperty;
+  delete object[property];
+  return object;
 }
 
 function newUser(name, email, password) {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  const newUser = {
-    'name': name,
-    'email': email,
-    'password': password
+  return {
+    name: name,
+    email: email,
+    password: password
   };
-  return myUser;
 }
 
 function hasEmail(user) {
@@ -125,15 +118,11 @@ function sumUserPostLikes(user) {
   // each post object has an integer property called 'likes'
   // sum together the likes from all the post objects
   // return the sum
-  let arr = [];
-
-  for (let i = 0; i < users.post.length; i++) {
-    arr.push(user.posts[i].likes;
-  }
-  let sum = arr.reduce(function(a, b) {
-    return a + b;
+  var sum = 0;
+  user.posts.forEach(function sumLikes(elem) {
+    sum += elem.likes;
   });
-    return sum;
+  return sum;
 }
 
 function addCalculateDiscountPriceMethod(storeItem) {
@@ -145,11 +134,9 @@ function addCalculateDiscountPriceMethod(storeItem) {
   // price -> 20
   // discountPercentage -> .2
   // discountPrice = 20 - (20 * .2)
-  storeItem.calsulateDiscountPrice = function(price, discountPercentage) {
-    price = storeItem.price;
-    discountPercentage = storeItem.discountPercentage;
-    let newPrice = price - (price * discountPercentage);
-    return newPrice;
+  storeItem.calculateDiscountPrice = function() {
+    var discount = this.price * this.discountPercentage;
+    return this.price - discount;
   };
   return storeItem;
 }
